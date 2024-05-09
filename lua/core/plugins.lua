@@ -15,10 +15,15 @@ local plugins = {
   -- Themes
   'navarasu/onedark.nvim',
   'nvim-lualine/lualine.nvim',
-  'nvim-tree/nvim-tree.lua',
-
-  -- Dependencies
   'nvim-tree/nvim-web-devicons',
+
+  -- Features
+  'nvim-tree/nvim-tree.lua',
+  {
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.6',
+    dependencies = { 'nvim-lua/plenary.nvim' }
+  }
 }
 
 local opts = {
