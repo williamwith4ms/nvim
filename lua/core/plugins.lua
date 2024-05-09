@@ -12,7 +12,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-
+  -- Themes
+  'navarasu/onedark.nvim',
 }
 
 local opts = {
