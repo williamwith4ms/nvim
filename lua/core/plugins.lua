@@ -19,6 +19,7 @@ local plugins = {
 
   -- Features
   'nvim-tree/nvim-tree.lua',
+  'nvim-treesitter/nvim-treesitter',
   {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.6',
