@@ -17,14 +17,18 @@ local plugins = {
   'nvim-lualine/lualine.nvim',
   'nvim-tree/nvim-web-devicons',
 
-  -- Features
-  'nvim-tree/nvim-tree.lua',
-  'nvim-treesitter/nvim-treesitter',
-
   -- LSP
   'williamboman/mason.nvim',
   'williamboman/mason-lspconfig.nvim',
   'neovim/nvim-lspconfig',
+
+    -- Features
+  'nvim-tree/nvim-tree.lua',
+  'nvim-treesitter/nvim-treesitter',
+  'hrsh7th/nvim-cmp',
+  'hrsh7th/cmp-nvim-lsp',
+  'L3MON4D3/LuaSnip',
+  'rafamadriz/friendly-snippets',
   {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.6',
