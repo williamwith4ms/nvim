@@ -20,6 +20,11 @@ local plugins = {
   -- Features
   'nvim-tree/nvim-tree.lua',
   'nvim-treesitter/nvim-treesitter',
+
+  -- LSP
+  'williamboman/mason.nvim',
+  'williamboman/mason-lspconfig.nvim',
+  'neovim/nvim-lspconfig',
   {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.6',
