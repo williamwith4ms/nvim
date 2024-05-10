@@ -18,7 +18,10 @@ local plugins = {
   'nvim-tree/nvim-web-devicons',
   -- LSP
   'williamboman/mason.nvim',
-  
+  'williamboman/mason-lspconfig.nvim',
+  'neovim/nvim-lspconfig',
+  'nvim-telescope/telescope-ui-select.nvim',
+
   -- Features
   'nvim-tree/nvim-tree.lua',
   'nvim-treesitter/nvim-treesitter',
