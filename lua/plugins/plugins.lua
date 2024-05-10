@@ -21,7 +21,7 @@ local plugins = {
   'williamboman/mason-lspconfig.nvim',
   'neovim/nvim-lspconfig',
   'nvim-telescope/telescope-ui-select.nvim',
-
+  'nvimtools/none-ls.nvim',
   -- Features
   'nvim-tree/nvim-tree.lua',
   'nvim-treesitter/nvim-treesitter',
