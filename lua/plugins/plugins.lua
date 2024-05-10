@@ -16,7 +16,9 @@ local plugins = {
   'navarasu/onedark.nvim',
   'nvim-lualine/lualine.nvim',
   'nvim-tree/nvim-web-devicons',
-
+  -- LSP
+  'williamboman/mason.nvim',
+  
   -- Features
   'nvim-tree/nvim-tree.lua',
   'nvim-treesitter/nvim-treesitter',
