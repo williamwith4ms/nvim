@@ -14,8 +14,9 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
 	-- Themes
 	"navarasu/onedark.nvim",
+  "catppuccin/nvim",
+  "ellisonleao/gruvbox.nvim",
 	"nvim-lualine/lualine.nvim",
-	"nvim-tree/nvim-web-devicons",
 	"goolord/alpha-nvim",
 	-- LSP
 	"williamboman/mason.nvim",
@@ -27,20 +28,33 @@ local plugins = {
 		dependencies = { "nvimtools/none-ls-extras.nvim" },
 	},
 	-- Features
-	"nvim-tree/nvim-tree.lua",
+	--"nvim-tree/nvim-tree.lua",
 	"nvim-treesitter/nvim-treesitter",
-	{
+  {
 		"nvim-telescope/telescope.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 	-- autocomplete
 	"hrsh7th/nvim-cmp",
+  "github/copilot.vim",
 	{
 		"L3MON4D3/LuaSnip",
 		dependencies = { "rafamadriz/friendly-snippets" },
 	},
+  -- Rust
+  "mrcjkb/rustaceanvim",
+  -- evertthing else
 	"saadparwaiz1/cmp_luasnip",
   "hrsh7th/cmp-nvim-lsp",
+  "MarcHamamji/runner.nvim",
+  "ggandor/leap.nvim",
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+	    "nvim-tree/nvim-web-devicons",
+    },
+  }
 }
 
 local opts = {}

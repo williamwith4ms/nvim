@@ -8,10 +8,12 @@ cmp.setup({
 		end,
 	},
 	window = {
-		completion = cmp.config.window.bordered(),
-		documentation = cmp.config.window.bordered(),
+    -- completion = cmp.config.window.bordered(),
+		-- documentation = cmp.config.window.bordered(),
 	},
 	mapping = cmp.mapping.preset.insert({
+    ["<C-j>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+    ["<C-k>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
 		["<C-b>"] = cmp.mapping.scroll_docs(-4),
 		["<C-f>"] = cmp.mapping.scroll_docs(4),
 		["<C-Space>"] = cmp.mapping.complete(),
@@ -24,4 +26,19 @@ cmp.setup({
 	}, {
 		{ name = "buffer" },
 	}),
+
+  formatting = {
+    fields = {"abbr", "kind", "menu"},
+    format = function(entry, item)
+      local icon = {
+        nvim_lsp = "ω",
+        buffer = "ε",
+        path = "μ",
+      }
+      item.menu = icon[entry.source.name]
+      return item
+    end,
+  },
+
 })
+
