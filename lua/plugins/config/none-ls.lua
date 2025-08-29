@@ -5,6 +5,7 @@ null_ls.setup({
 		null_ls.builtins.formatting.stylua,
 		null_ls.builtins.formatting.black,
 		null_ls.builtins.formatting.isort,
+    null_ls.builtins.completion.spell,
 		null_ls.builtins.formatting.prettier,
 
     require("none-ls.diagnostics.eslint_d").with({ condition = function(utils) return utils.root_has_file({ ".eslintrc.js", ".eslintrc.json", ".eslintrc.cjs" }) end, }),

@@ -18,6 +18,7 @@ local plugins = {
   "ellisonleao/gruvbox.nvim",
 	"nvim-lualine/lualine.nvim",
 	"goolord/alpha-nvim",
+  "windwp/nvim-autopairs", 
 	-- LSP
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
@@ -41,6 +42,11 @@ local plugins = {
 		"L3MON4D3/LuaSnip",
 		dependencies = { "rafamadriz/friendly-snippets" },
 	},
+  "mfussenegger/nvim-dap",
+  {
+    "rcarriga/nvim-dap-ui",
+    dependencies = { "nvim-neotest/nvim-nio" },
+  },
   -- Rust
   "mrcjkb/rustaceanvim",
   -- evertthing else
