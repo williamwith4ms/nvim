@@ -54,14 +54,17 @@ local plugins = {
   "hrsh7th/cmp-nvim-lsp",
   "MarcHamamji/runner.nvim",
   "ggandor/leap.nvim",
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-	    "nvim-tree/nvim-web-devicons",
-    },
-  }
+
+	{
+		"nvim-neo-tree/neo-tree.nvim",
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+			"nvim-tree/nvim-web-devicons",
+		},
+	},
 }
+
+require('plugins.show_keybinds')
 
 local opts = {}
 
