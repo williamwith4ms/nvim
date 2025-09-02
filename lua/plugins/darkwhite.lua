@@ -33,16 +33,16 @@ darkwhite.colors = {
   green   = "#5ca77c",
   yellow  = "#c2a85c",
   blue    = "#5c7cc2",
-  magenta = "#7c5fc0",
-  cyan    = "#5ca7a7",
+  magenta = "#5ca7a7",
+  cyan    = "#7c5fc0",
   white   = "#d9d9d9",
   bright_black   = "#5e5e5e",
   bright_red     = "#c2565a",
   bright_green   = "#5ca77c",
   bright_yellow  = "#c2a85c",
   bright_blue    = "#5c7cc2",
-  bright_magenta = "#7c5fc0",
-  bright_cyan    = "#5ca7a7",
+  bright_magenta = "#5ca7a7",
+  bright_cyan    = "#7c5fc0",
   bright_white   = "#bdbdbd",
 }
 
@@ -66,12 +66,12 @@ function darkwhite.setup()
   vim.api.nvim_set_hl(0, "WinSeparator",   { fg = c.active_border, bg = c.bg })
 
   vim.api.nvim_set_hl(0, "Comment",        { fg = c.bright_black, italic = true })
-  vim.api.nvim_set_hl(0, "Constant",       { fg = c.magenta })
+  vim.api.nvim_set_hl(0, "Constant",       { fg = c.cyan })
   vim.api.nvim_set_hl(0, "String",         { fg = c.green })
   vim.api.nvim_set_hl(0, "Identifier",     { fg = c.blue })
   vim.api.nvim_set_hl(0, "Function",       { fg = c.blue, bold = true })
   vim.api.nvim_set_hl(0, "Statement",      { fg = c.red })
-  vim.api.nvim_set_hl(0, "Keyword",        { fg = c.magenta, bold = true })
+  vim.api.nvim_set_hl(0, "Keyword",        { fg = c.cyan, bold = true })
   vim.api.nvim_set_hl(0, "Type",           { fg = c.yellow })
   vim.api.nvim_set_hl(0, "Special",        { fg = c.yellow })
   vim.api.nvim_set_hl(0, "Error",          { fg = c.white, bg = c.red, bold = true })
@@ -92,20 +92,21 @@ function darkwhite.setup()
   vim.api.nvim_set_hl(0, "DiagnosticError", { fg = c.red })
   vim.api.nvim_set_hl(0, "DiagnosticWarn",  { fg = c.yellow })
   vim.api.nvim_set_hl(0, "DiagnosticInfo",  { fg = c.blue })
-  vim.api.nvim_set_hl(0, "DiagnosticHint",  { fg = c.cyan })
+  vim.api.nvim_set_hl(0, "DiagnosticHint",  { fg = c.magenta })
 
     -- Treesitter highlight groups
     vim.api.nvim_set_hl(0, "@variable",      { fg = c.fg })
     vim.api.nvim_set_hl(0, "@function",      { fg = c.blue, bold = true })
     vim.api.nvim_set_hl(0, "@type",          { fg = c.yellow, underline = true })
-    vim.api.nvim_set_hl(0, "@keyword",       { fg = c.magenta, bold = true })
+      vim.api.nvim_set_hl(0, "@type", { fg = c.yellow, underline = true })
+  vim.api.nvim_set_hl(0, "@keyword",       { fg = c.cyan, bold = true })
     vim.api.nvim_set_hl(0, "@string",        { fg = c.green })
     vim.api.nvim_set_hl(0, "@comment",       { fg = c.bright_black, italic = true })
-    vim.api.nvim_set_hl(0, "@constant",      { fg = c.red })
-    vim.api.nvim_set_hl(0, "@number",        { fg = c.cyan })
-    vim.api.nvim_set_hl(0, "@operator",      { fg = c.bright_magenta })
+  vim.api.nvim_set_hl(0, "@constant",      { fg = c.magenta })
+  vim.api.nvim_set_hl(0, "@number",        { fg = c.magenta })
+  vim.api.nvim_set_hl(0, "@operator",      { fg = c.bright_cyan })
     vim.api.nvim_set_hl(0, "@parameter",     { fg = c.bright_blue })
-    vim.api.nvim_set_hl(0, "@field",         { fg = c.bright_cyan })
+  vim.api.nvim_set_hl(0, "@field",         { fg = c.bright_magenta })
     vim.api.nvim_set_hl(0, "@property",      { fg = c.bright_yellow })
     vim.api.nvim_set_hl(0, "@punctuation",   { fg = c.bright_red })
 end

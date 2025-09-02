@@ -8,6 +8,7 @@ local keybinds = {
   { mode = 'n', lhs = '<leader>g', rhs = ':Neotree git_status float toggle<CR>', desc = 'Neotree git status' },
   { mode = 'n', lhs = '<leader>l', rhs = 'toggle_number()', desc = 'Toggle relative number' },
   { mode = 'n', lhs = '<leader>kb', rhs = ':ShowKeybinds<CR>', desc = 'Show all custom keybinds' },
+  { mode = 'n', lhs = '<leader>e', rhs = 'vim.diagnostic.open_float()', desc = 'Show diagnostics' }
 }
 
 function M.show_keybinds()
