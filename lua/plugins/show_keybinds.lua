@@ -5,10 +5,10 @@ local keybinds = {
   { mode = 'n', lhs = '<leader>h', rhs = ':nohlsearch<CR>', desc = 'Clear search highlight' },
   { mode = 'n', lhs = '<leader>e', rhs = 'vim.diagnostic.open_float()', desc = 'Show diagnostics' },
   { mode = 'n', lhs = '<leader>\\', rhs = ':Neotree toggle<CR>', desc = 'Toggle Neotree' },
-  { mode = 'n', lhs = '<leader>g', rhs = ':Neotree git_status float toggle<CR>', desc = 'Neotree git status' },
   { mode = 'n', lhs = '<leader>l', rhs = 'toggle_number()', desc = 'Toggle relative number' },
   { mode = 'n', lhs = '<leader>kb', rhs = ':ShowKeybinds<CR>', desc = 'Show all custom keybinds' },
   { mode = 'n', lhs = '<leader>e', rhs = 'vim.diagnostic.open_float()', desc = 'Show diagnostics' }
+  { mode = 'n', lhs = '<leader>g', rhs = ':LazyGit', desc ='Open lazygit'}
 }
 
 function M.show_keybinds()

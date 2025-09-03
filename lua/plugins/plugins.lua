@@ -54,6 +54,7 @@ local plugins = {
   "hrsh7th/cmp-nvim-lsp",
   "MarcHamamji/runner.nvim",
   "ggandor/leap.nvim",
+  "kdheepak/lazygit.nvim",
 
 	{
 		"nvim-neo-tree/neo-tree.nvim",
