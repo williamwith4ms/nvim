@@ -24,6 +24,7 @@ local plugins = {
 	"williamboman/mason-lspconfig.nvim",
 	"neovim/nvim-lspconfig",
 	"nvim-telescope/telescope-ui-select.nvim",
+  "iamcco/markdown-preview.nvim",
 	{
 		"nvimtools/none-ls.nvim",
 		dependencies = { "nvimtools/none-ls-extras.nvim" },
@@ -47,6 +48,7 @@ local plugins = {
     "rcarriga/nvim-dap-ui",
     dependencies = { "nvim-neotest/nvim-nio" },
   },
+  "lervag/vimtex",
   -- Rust
   "mrcjkb/rustaceanvim",
   -- evertthing else
