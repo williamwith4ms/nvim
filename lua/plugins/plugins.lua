@@ -55,7 +55,6 @@ local plugins = {
 	"saadparwaiz1/cmp_luasnip",
   "hrsh7th/cmp-nvim-lsp",
   "MarcHamamji/runner.nvim",
-  "ggandor/leap.nvim",
   "kdheepak/lazygit.nvim",
 
 	{
