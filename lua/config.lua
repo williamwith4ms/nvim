@@ -5,6 +5,12 @@ vim.opt.shiftwidth = 2
 vim.opt.shiftround = true
 vim.opt.expandtab = true
 
+vim.opt.list = true
+vim.opt.listchars = {
+  trail = '·',
+  tab = '  ',
+  nbsp = '◇'
+}
 
 -- code folding
 vim.wo.foldmethod = 'expr'

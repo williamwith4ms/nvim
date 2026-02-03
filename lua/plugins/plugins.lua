@@ -18,7 +18,7 @@ local plugins = {
   "ellisonleao/gruvbox.nvim",
 	"nvim-lualine/lualine.nvim",
 	"goolord/alpha-nvim",
-  "windwp/nvim-autopairs", 
+  "windwp/nvim-autopairs",
 	-- LSP
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
@@ -56,12 +56,12 @@ local plugins = {
   "hrsh7th/cmp-nvim-lsp",
   "MarcHamamji/runner.nvim",
   "kdheepak/lazygit.nvim",
-
+  "folke/which-key.nvim",
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		dependencies = {
 			"MunifTanjim/nui.nvim",
-			"nvim-tree/nvim-web-devicons",
+			"nvim-tree/nvim-web-devicons"
 		},
 	},
 }
