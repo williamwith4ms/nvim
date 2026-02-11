@@ -12,51 +12,15 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-	-- Themes
-	"navarasu/onedark.nvim",
-  "catppuccin/nvim",
-  "ellisonleao/gruvbox.nvim",
-	"nvim-lualine/lualine.nvim",
+	-- Themes/UI
+	"catppuccin/nvim",
+	"ellisonleao/gruvbox.nvim",
 	"goolord/alpha-nvim",
-  "windwp/nvim-autopairs",
-	-- LSP
-	"williamboman/mason.nvim",
-	"williamboman/mason-lspconfig.nvim",
-	"neovim/nvim-lspconfig",
-	"nvim-telescope/telescope-ui-select.nvim",
-  "iamcco/markdown-preview.nvim",
-	{
-		"nvimtools/none-ls.nvim",
-		dependencies = { "nvimtools/none-ls-extras.nvim" },
-	},
-	-- Features
-	--"nvim-tree/nvim-tree.lua",
-	"nvim-treesitter/nvim-treesitter",
-  {
-		"nvim-telescope/telescope.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
-	},
-	-- autocomplete
-	"hrsh7th/nvim-cmp",
-  "github/copilot.vim",
-	{
-		"L3MON4D3/LuaSnip",
-		dependencies = { "rafamadriz/friendly-snippets" },
-	},
-  "mfussenegger/nvim-dap",
-  {
-    "rcarriga/nvim-dap-ui",
-    dependencies = { "nvim-neotest/nvim-nio" },
-  },
-  "lervag/vimtex",
-  -- Rust
-  "mrcjkb/rustaceanvim",
-  -- evertthing else
-	"saadparwaiz1/cmp_luasnip",
-  "hrsh7th/cmp-nvim-lsp",
-  "MarcHamamji/runner.nvim",
-  "kdheepak/lazygit.nvim",
-  "folke/which-key.nvim",
+	"navarasu/onedark.nvim",
+	"nvim-lualine/lualine.nvim",
+	"windwp/nvim-autopairs",
+
+	-- File Explorer & 
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		dependencies = {
@@ -64,6 +28,57 @@ local plugins = {
 			"nvim-tree/nvim-web-devicons"
 		},
 	},
+
+	-- Git
+	"kdheepak/lazygit.nvim",
+
+	-- LSP & Tools
+	"iamcco/markdown-preview.nvim",
+	"neovim/nvim-lspconfig",
+	"williamboman/mason-lspconfig.nvim",
+	"williamboman/mason.nvim",
+	{
+		"nvimtools/none-ls.nvim",
+		dependencies = { "nvimtools/none-ls-extras.nvim" },
+	},
+
+	-- Treesitter
+	"nvim-treesitter/nvim-treesitter",
+
+	-- Telescope
+	{
+		"nvim-telescope/telescope.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+	},
+	"nvim-telescope/telescope-ui-select.nvim",
+
+	-- Autocomplete & Snippets
+	"github/copilot.vim",
+	"hrsh7th/cmp-nvim-lsp",
+	"hrsh7th/nvim-cmp",
+	{
+		"L3MON4D3/LuaSnip",
+		dependencies = { "rafamadriz/friendly-snippets" },
+	},
+	"saadparwaiz1/cmp_luasnip",
+
+	-- Debugging
+	"mfussenegger/nvim-dap",
+	"jay-babu/mason-nvim-dap.nvim",
+	{
+		"rcarriga/nvim-dap-ui",
+		dependencies = { "nvim-neotest/nvim-nio" },
+	},
+
+	-- LaTeX
+	"lervag/vimtex",
+
+	-- Rust
+	"mrcjkb/rustaceanvim",
+
+	-- Utility
+	"folke/which-key.nvim",
+	"MarcHamamji/runner.nvim",
 }
 
 require('plugins.show_keybinds')

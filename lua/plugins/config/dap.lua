@@ -1,16 +1,20 @@
 local dap, dapui = require("dap"), require("dapui")
+
+dapui.setup()
+
 dap.listeners.before.attach.dapui_config = function()
   dapui.open()
 end
 dap.listeners.before.launch.dapui_config = function()
   dapui.open()
 end
-dap.listeners.before.event_terminated.dapui_config = function()
-  dapui.close()
-end
-dap.listeners.before.event_exited.dapui_config = function()
-  dapui.close()
-end
+-- dap.listeners.before.event_terminated.dapui_config = function()
+--   dapui.close()
+-- end
+-- dap.listeners.before.event_exited.dapui_config = function()
+--   dapui.close()
+-- end
+
 
 dap.adapters.lldb = {
   type = "executable",
@@ -50,9 +54,10 @@ dap.adapters.python = function(cb, config)
       },
     })
   else
+    local python = vim.fn.exepath('python3')
     cb({
       type = 'executable',
-      command = 'path/to/virtualenvs/debugpy/bin/python',
+      command = python ~= '' and python or '/usr/bin/python3',
       args = { '-m', 'debugpy.adapter' },
       options = {
         source_filetype = 'python',
@@ -82,8 +87,12 @@ dap.configurations.python = {
 }
 
 
-
-vim.keymap.set("n", "<leader>dt", "<cmd>lua require('dap').togge_breakpoint()<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>dc", "<cmd>lua require('dap').continue()<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>ds", "<cmd>lua require('dap').step_over()<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>di", "<cmd>lua require('dap').step_into()<CR>", { noremap = true, silent = true })
+vim.keymap.set('n', '<F5>', function() require('dap').continue() end, { desc = 'DAP: Continue/Start Debugging' })
+vim.keymap.set('n', '<F10>', function() require('dap').step_over() end, { desc = 'DAP: Step Over' })
+vim.keymap.set('n', '<F11>', function() require('dap').step_into() end, { desc = 'DAP: Step Into' })
+vim.keymap.set('n', '<F12>', function() require('dap').step_out() end, { desc = 'DAP: Step Out' })
+vim.keymap.set('n', '<leader>dt', function() require('dap').toggle_breakpoint() end, { noremap = true, silent = true, desc = 'DAP: Toggle Breakpoint' })
+vim.keymap.set('n', '<leader>dc', function() require('dap').continue() end, { noremap = true, silent = true, desc = 'DAP: Continue/Start Debugging' })
+vim.keymap.set('n', '<leader>ds', function() require('dap').step_over() end, { noremap = true, silent = true, desc = 'DAP: Step Over' })
+vim.keymap.set('n', '<leader>di', function() require('dap').step_into() end, { noremap = true, silent = true, desc = 'DAP: Step Into' })
+vim.keymap.set('n', '<leader>dx', function() require('dap').close() dapui.close() end, { desc = 'DAP: Close DAP' })  

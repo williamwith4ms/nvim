@@ -18,5 +18,7 @@ vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.o.foldlevel = 99
 
 vim.opt.relativenumber = true
-vim.opt.number=true
+vim.opt.number = true
 vim.opt.signcolumn = 'yes'
+
+vim.opt.mouse = ""

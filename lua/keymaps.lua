@@ -1,11 +1,13 @@
+-- Leader keys
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>', { silent = true })
+-- General keymaps
+vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>', { silent = true, desc = 'Clear search highlight' })
+vim.keymap.set('n', '<leader>\\', ':Neotree toggle<CR>', { silent = true, desc = 'Toggle Neotree' })
+vim.keymap.set('n', '<leader>g', ':LazyGit<cr>', { silent = true, desc = 'Open LazyGit' })
 
-vim.keymap.set('n', '<leader>\\', ':Neotree toggle<CR>', { silent = true })
-vim.keymap.set('n', '<leader>g', ':LazyGit<cr>', { silent = true })
-
+-- Toggle relative number
 function toggle_number()
   if vim.wo.relativenumber then
     vim.wo.relativenumber = false
@@ -13,34 +15,27 @@ function toggle_number()
     vim.wo.relativenumber = true
   end
 end
+vim.keymap.set('n', '<leader>l', '<cmd>lua toggle_number()<CR>', { silent = true, desc = 'Toggle relative number' })
 
-vim.keymap.set('n', '<leader>l', '<cmd>lua toggle_number()<CR>', { silent = true })
+vim.keymap.set('n', '<leader>k', ':ShowKeybinds<CR>', { silent = true, desc = 'Show keybindings' })
+
+-- Diagnostics
 vim.keymap.set('n', '<leader>e', function()
   vim.diagnostic.open_float()
 end, { desc = 'Show diagnostics', silent = true })
 
--- jj for normal mode
-vim.keymap.set('i', 'jj', '<Esc>', { noremap = true, silent = true })
+-- Insert mode: jj to escape
+vim.keymap.set('i', 'jj', '<Esc>', { noremap = true, silent = true, desc = 'Exit insert mode' })
 
-vim.opt.mouse = ""
+-- Unset arrow keys in all modes
+for _, mode in ipairs({'n', 'i', 'v'}) do
+  for _, key in ipairs({'<up>', '<down>', '<left>', '<right>'}) do
+    vim.keymap.set(mode, key, '<nop>')
+  end
+end
 
--- unset arrow keys 
-vim.keymap.set('n', '<up>', '<nop>')
-vim.keymap.set('n', '<down>', '<nop>')
-vim.keymap.set('n', '<left>', '<nop>')
-vim.keymap.set('n', '<right>', '<nop>')
-
-vim.keymap.set('i', '<up>', '<nop>')
-vim.keymap.set('i', '<down>', '<nop>')
-vim.keymap.set('i', '<left>', '<nop>')
-vim.keymap.set('i', '<right>', '<nop>')
-
-vim.keymap.set('v', '<up>', '<nop>')
-vim.keymap.set('v', '<down>', '<nop>')
-vim.keymap.set('v', '<left>', '<nop>')
-vim.keymap.set('v', '<right>', '<nop>')
-
-vim.keymap.set('n', '<A-h>', '<C-w>h')
-vim.keymap.set('n', '<A-j>', '<C-w>j')
-vim.keymap.set('n', '<A-k>', '<C-w>k')
-vim.keymap.set('n', '<A-l>', '<C-w>l')
+-- Window navigation
+vim.keymap.set('n', '<A-h>', '<C-w>h', { desc = 'Move to left window' })
+vim.keymap.set('n', '<A-j>', '<C-w>j', { desc = 'Move to lower window' })
+vim.keymap.set('n', '<A-k>', '<C-w>k', { desc = 'Move to upper window' })
+vim.keymap.set('n', '<A-l>', '<C-w>l', { desc = 'Move to right window' })
