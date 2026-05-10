@@ -4,12 +4,18 @@
 local darkwhite = {}
 
 darkwhite.colors = {
-  bg              = "#d9d9d9",
-  fg              = "#232323",
-  selection       = "#bdbdbd",
-  selection_fg    = "#232323",
-  cursor          = "#7c5fc0",
-  cursor_fg       = "#d9d9d9",
+  -- bg              = "#d9d9d9",
+  -- fg              = "#232323",
+  bg              = "#232323",
+  fg              = "#d9d9d9",
+  -- selection       = "#bdbdbd",
+  -- selection_fg    = "#232323",
+  selection       = "#5e5e5e",
+  selection_fg    = "#d9d9d9",
+  -- cursor          = "#7c5fc0",
+  -- cursor_fg       = "#d9d9d9",
+  cursor          = "#d9d9d9",
+  cursor_fg       = "#232323",
 
   active_border   = "#7c5fc0",
   inactive_border = "#5e4a93",
